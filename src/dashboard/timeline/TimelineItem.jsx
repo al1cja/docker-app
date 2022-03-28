@@ -1,7 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse, faCar, faUtensils, faShirt, faMoneyBill, faCircleQuestion } from '@fortawesome/free-solid-svg-icons'
+import { 
+    faHouse, 
+    faCar, 
+    faUtensils, 
+    faShirt, 
+    faMoneyBill, 
+    faCircleQuestion, 
+    faStethoscope,
+    faChampagneGlasses
+} from '@fortawesome/free-solid-svg-icons'
+
+import '../../variables.scss';
 
 const TimelineItemWrapper = styled.div`
     border: 1px solid #415a8b;
@@ -25,7 +37,6 @@ const TimelineItemDetails = styled.div`
     align-items: center;
 
     svg {
-        color: #e8926f;
         font-size: 40px;
     }
 
@@ -55,6 +66,10 @@ const TimelineItem = ({ name, category, price, date}) => {
                 return faShirt;
             case 'Utilities':
                 return faMoneyBill;
+            case 'Medical & Healthcare':
+                return faStethoscope;
+            case 'Entertainment':
+                return faChampagneGlasses;
             default:
                 return faCircleQuestion;
         }
@@ -65,7 +80,7 @@ const TimelineItem = ({ name, category, price, date}) => {
         <TimelineItemWrapper>
             <TimelineItemDate>{date}</TimelineItemDate>
             <TimelineItemDetails>
-                <FontAwesomeIcon icon={categoryIcon}/>
+                <FontAwesomeIcon icon={categoryIcon} className={category.toLowerCase().split(" ")[0]}/>
                 <TimelineItemName>
                     <h3>{category}</h3>
                     <span>{name}</span>

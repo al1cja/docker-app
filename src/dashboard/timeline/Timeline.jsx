@@ -1,58 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import TimelineItem from './TimelineItem';
+import TimelineChart from './TimelineChart';
 
 const TimelineWrapper = styled.div`
     display: flex;
     flex-flow: column;
     align-items: center;
 `
-
-// ['Housing', 'Transportation', 'Food', 'Utilities', 'Medical & Healthcare', 'Entertainment', 'Clothes', 'Other']
-const data = [
-    {
-        name: 'Mortage',
-        category: 'Housing',
-        price: '2000',
-        date: '2022-03-01'
-    },
-    {
-        name: 'Train ticket',
-        category: 'Transportation',
-        price: '50',
-        date: '2022-03-02'
-    },
-    {
-        name: 'Groceries',
-        category: 'Food',
-        price: '100',
-        date: '2022-03-05'
-    },
-    {
-        name: 'New T-shirt',
-        category: 'Clothes',
-        price: '50',
-        date: '2022-03-05'
-    },
-    {
-        name: 'Electricity bills',
-        category: 'Utilities',
-        price: '100',
-        date: '2022-03-10'
-    }
-]
-
 const Timeline = () => {
+    const [data, setData] = useState();
+
+    useEffect(() => {
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => data.expense.sort((a, b) => 
+                a.date - b.date
+            ))
+            .then(data => setData(data))
+    }, [])
+
+    const isLoading = !data || data.length < 1;
+
     return (
         <TimelineWrapper>
+            <TimelineChart />
             <h2>Timeline</h2>
-            {data.map(element => (
-                <TimelineItem 
-                    name={element.name}
-                    category={element.category}
-                    price={element.price}
-                    date={element.date}
+            {!isLoading && data.map(expense => (
+                <TimelineItem
+                    key={expense.id}
+                    name={expense.name}
+                    category={expense.category}
+                    price={expense.price}
+                    date={expense.date}
                 />
             ))}
         </TimelineWrapper>

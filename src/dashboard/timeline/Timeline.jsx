@@ -4,11 +4,9 @@ import styled from 'styled-components';
 import TimelineItem from './TimelineItem';
 import TimelineChart from './TimelineChart';
 
-const TimelineWrapper = styled.div`
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-`
+import { 
+    ItemWrapper as TimelineWrapper
+} from '../../components/ItemDetails';
 
 const TimelineDetails = styled.div`
     width: 100%;

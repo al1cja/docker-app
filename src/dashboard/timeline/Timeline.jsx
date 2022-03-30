@@ -8,27 +8,28 @@ const TimelineWrapper = styled.div`
     display: flex;
     flex-flow: column;
     align-items: center;
+`
 
-    div.test {
-        width: 100%;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        background-color: rgba(39, 53, 82, 0.05);
-        background-color: #eef5ed;
-        padding-top: 30px;
+const TimelineDetails = styled.div`
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: rgba(39, 53, 82, 0.05);
+    background-color: #eef5ed;
+    padding-top: 30px;
 
-        h2 {
-            font-size: 40px;
-            margin-bottom: 50px;
-            color: #273552;
-        }
+    h2 {
+        font-size: 40px;
+        margin-bottom: 50px;
+        color: #273552;
     }
 `
+
 const Timeline = ({ data, isLoading }) =>  (
     <TimelineWrapper>
         {!isLoading && <TimelineChart expenseData={data} />}
-        <div className='test'>
+        <TimelineDetails>
             <h2>Timeline</h2>
             {!isLoading && data.map(expense => (
                 <TimelineItem
@@ -39,7 +40,7 @@ const Timeline = ({ data, isLoading }) =>  (
                     date={expense.date}
                 />
             ))}
-        </div>
+        </TimelineDetails>
     </TimelineWrapper>
 )
 

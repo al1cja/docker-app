@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./navbar/Navbar";
 import Timeline from './dashboard/timeline/Timeline';
-import PieChart from "./dashboard/PieChart";
+import Categories from './dashboard/categories/Categories';
 
 import './App.css';
 
@@ -25,7 +25,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Timeline data={data} isLoading={isLoading}/>} />
-        <Route path="details" element={<PieChart data={data} isLoading={isLoading}/>} />
+        <Route path="categories" element={<Categories data={data} isLoading={isLoading}/>} />
       </Routes>
     </div>
   );

@@ -26,7 +26,7 @@ const LinkElement = styled(NavLink)`
 const Navbar = () => (
     <NavbarWrapper>
         <LinkElement to="/">Timeline</LinkElement>
-        <LinkElement to="/details">Details</LinkElement>
+        <LinkElement to="/categories">Categories</LinkElement>
     </NavbarWrapper>
 )
 

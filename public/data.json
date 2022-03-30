@@ -45,7 +45,7 @@
         "id": 6,
         "name": "Cinema",
         "category": "Entertainment",
-        "price": "50",
+        "price": 50,
         "date": "2022-03-06"
     },
     {

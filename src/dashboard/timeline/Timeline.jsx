@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import TimelineItem from './TimelineItem';
@@ -8,24 +8,27 @@ const TimelineWrapper = styled.div`
     display: flex;
     flex-flow: column;
     align-items: center;
+
+    div.test {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        background-color: rgba(39, 53, 82, 0.05);
+        background-color: #eef5ed;
+        padding-top: 30px;
+
+        h2 {
+            font-size: 40px;
+            margin-bottom: 50px;
+            color: #273552;
+        }
+    }
 `
-const Timeline = () => {
-    const [data, setData] = useState();
-
-    useEffect(() => {
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => data.expense.sort((a, b) => 
-                a.date - b.date
-            ))
-            .then(data => setData(data))
-    }, [])
-
-    const isLoading = !data || data.length < 1;
-
-    return (
-        <TimelineWrapper>
-            <TimelineChart />
+const Timeline = ({ data, isLoading }) =>  (
+    <TimelineWrapper>
+        {!isLoading && <TimelineChart expenseData={data} />}
+        <div className='test'>
             <h2>Timeline</h2>
             {!isLoading && data.map(expense => (
                 <TimelineItem
@@ -36,8 +39,8 @@ const Timeline = () => {
                     date={expense.date}
                 />
             ))}
-        </TimelineWrapper>
-    )
-}
+        </div>
+    </TimelineWrapper>
+)
 
 export default Timeline;

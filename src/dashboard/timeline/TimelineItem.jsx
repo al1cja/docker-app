@@ -20,6 +20,7 @@ const TimelineItemWrapper = styled.div`
     border-radius: 5px;
     width: 80%;
     margin: 5px 0;
+    background-color: #fff;
 `;
 
 const TimelineItemDate = styled.div`

@@ -1,26 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import styled from 'styled-components';
 
 import CategoryChart from './CategoryChart';
 import CategoryItem from './CategoryItem';
 
-import { ItemWrapper as CategoriesWrapper } from '../../components/ItemDetails';
-
-const CategoriesDetails = styled.div`
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    background-color: rgba(39, 53, 82, 0.05);
-    background-color: #eef5ed;
-    padding-top: 30px;
-
-    h2 {
-        font-size: 40px;
-        margin-bottom: 50px;
-        color: #273552;
-    }
-`
+import { 
+    ItemWrapper as CategoriesWrapper,
+    ItemSection as CategoriesDetails
+} from '../../components/ItemDetails';
 
 const getValues = (filteredCategories, data) => {
     const values = []

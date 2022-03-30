@@ -29,3 +29,19 @@ export const ItemElement = styled.div`
     margin: 5px 0;
     background-color: #fff;
 `;
+
+export const ItemSection = styled.div`
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: rgba(39, 53, 82, 0.05);
+    background-color: #eef5ed;
+    padding-top: 30px;
+
+    h2 {
+        font-size: 40px;
+        margin-bottom: 50px;
+        color: #273552;
+    }
+`

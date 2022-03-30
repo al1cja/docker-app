@@ -1,28 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import TimelineItem from './TimelineItem';
 import TimelineChart from './TimelineChart';
 
 import { 
-    ItemWrapper as TimelineWrapper
+    ItemWrapper as TimelineWrapper,
+    ItemSection as TimelineDetails
 } from '../../components/ItemDetails';
-
-const TimelineDetails = styled.div`
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    background-color: rgba(39, 53, 82, 0.05);
-    background-color: #eef5ed;
-    padding-top: 30px;
-
-    h2 {
-        font-size: 40px;
-        margin-bottom: 50px;
-        color: #273552;
-    }
-`
 
 const Timeline = ({ data, isLoading }) =>  (
     <TimelineWrapper>

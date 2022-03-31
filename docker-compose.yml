@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  react-docker:
+    container_name: react-docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - 8000
+    ports:
+      - 8080:80

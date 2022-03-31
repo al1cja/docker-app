@@ -1,0 +1,65 @@
+{"expense": [
+    {
+        "id": 0,
+        "name": "Mortage",
+        "category": "Housing",
+        "price": 2000,
+        "date": "2022-03-01"
+    },
+    {
+        "id": 1,
+        "name": "Train ticket",
+        "category": "Transportation",
+        "price": 50,
+        "date": "2022-03-02"
+    },
+    {
+        "id": 2,
+        "name": "Groceries",
+        "category": "Food",
+        "price": 100,
+        "date": "2022-03-05"
+    },
+    {
+        "id": 3,
+        "name": "New T-shirt",
+        "category": "Clothes",
+        "price": 50,
+        "date": "2022-03-05"
+    },
+    {
+        "id": 4,
+        "name": "Electricity bills",
+        "category": "Utilities",
+        "price": 100,
+        "date": "2022-03-10"
+    },
+    {
+        "id": 5,
+        "name": "Groceries",
+        "category": "Food",
+        "price": 100,
+        "date": "2022-03-05"
+    },
+    {
+        "id": 6,
+        "name": "Cinema",
+        "category": "Entertainment",
+        "price": 50,
+        "date": "2022-03-06"
+    },
+    {
+        "id": 7,
+        "name": "Plant",
+        "category": "Other",
+        "price": 100,
+        "date": "2022-03-07"
+    },
+    {
+        "id": 8,
+        "name": "Doctor\"s appointment",
+        "category": "Medical & Healthcare",
+        "price": 500,
+        "date": "2022-03-12"
+    }
+]}

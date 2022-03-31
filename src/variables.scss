@@ -1,0 +1,40 @@
+$housing-color: #e8926f;
+$transportation-color: #e8e46f;
+$food-color: #6f97e8;
+$utilities-color: #a7e86f;
+$medical-color: #6fcce8;
+$entertainment-color: #e86fa9;
+$clothes-color: #8d6fe8;
+$other-color: #e86f6f;
+
+.housing {
+    color: $housing-color;
+}
+
+.transportation {
+    color: $transportation-color;
+}
+
+.food {
+    color: $food-color;
+}
+
+.utilities {
+    color: $utilities-color;
+}
+
+.medical {
+    color: $medical-color;
+}
+
+.entertainment {
+    color: $entertainment-color;
+}
+
+.clothes {
+    color: $clothes-color;
+}
+
+.other {
+    color: $other-color;
+}

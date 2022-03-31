@@ -50,6 +50,7 @@ const TimelineChart = ({ expenseData }) => {
     labels: filteredDates,
     datasets: [
       {
+        label: 'Expenses per Day',
         data: values,
         backgroundColor: [
           'rgb(232, 145, 111)'
@@ -60,6 +61,11 @@ const TimelineChart = ({ expenseData }) => {
 
   const options = {
     maintainAspectRatio: false,
+    plugins:{
+      legend: {
+        display: false
+      }
+    }
   }
 
   return (
